@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="知屿课堂，专注实战与成长的在线课程平台。" />
+  <title>知屿课堂｜把热爱学成专业</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="announcement">
+    <span>新学期成长计划</span>
+    <strong>精选课程限时优惠，满 299 元再减 30 元</strong>
+    <button data-scroll="#courses">立即选课 →</button>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="知屿课堂首页"><span class="brand-mark">知</span><span>知屿课堂</span></a>
+    <nav class="main-nav" id="mainNav"><a class="active" href="#">首页</a><a href="#courses">全部课程</a><a href="#paths">学习路径</a><a href="#benefits">会员权益</a></nav>
+    <div class="header-actions">
+      <button class="icon-button mobile-menu" id="mobileMenu" aria-label="打开菜单">☰</button>
+      <button class="icon-button" id="favoriteButton" aria-label="我的收藏">♡<span class="badge" id="favoriteCount">0</span></button>
+      <button class="cart-button" id="cartButton"><span>购物袋</span><span class="cart-count" id="cartCount">0</span></button>
+      <button class="avatar-button" id="profileButton" aria-label="个人中心">YL</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> EXPLORE · LEARN · CREATE</div>
+        <h1>把每一次学习<br><em>变成真正的成长</em></h1>
+        <p>汇集行业实战导师与系统课程，从灵感到作品，从入门到进阶，陪你构建可持续的核心能力。</p>
+        <div class="hero-actions"><button class="primary-button" data-scroll="#courses">探索全部课程 <span>↗</span></button><button class="text-button" data-scroll="#paths">查看学习路径 <span>→</span></button></div>
+        <div class="hero-proof"><div class="avatar-stack"><i>林</i><i>周</i><i>陈</i><i>+</i></div><div><strong>28,600+</strong><span>学习者正在共同成长</span></div></div>
+      </div>
+      <div class="hero-visual" aria-label="课程学习展示">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-card card-main"><span class="mini-tag">本周热门</span><div class="abstract-book"><i></i><i></i><i></i></div><div class="main-card-copy"><span>DESIGN THINKING</span><strong>设计不是装饰<br>而是解决问题</strong></div></div>
+        <div class="floating-card float-rating"><span>学员好评</span><strong>4.9 <i>★★★★★</i></strong></div>
+        <div class="floating-card float-progress"><span>今日学习</span><div><i style="width:72%"></i></div><strong>72%</strong></div>
+        <div class="hero-seal">终身<br>学习<br><span>↻</span></div>
+      </div>
+    </section>
+
+    <section class="trust-strip"><span>课程内容合作伙伴</span><div>MONOCLE</div><div>NOTION</div><div>FIGMA</div><div>Adobe</div><div>Microsoft</div></section>
+
+    <section class="course-section" id="courses">
+      <div class="section-heading"><div><span class="section-kicker">CURATED COURSES</span><h2>找到适合你的好课</h2></div><p>每门课程都经过内容团队严格筛选，兼顾方法、实践与审美。</p></div>
+      <div class="shop-toolbar">
+        <div class="category-tabs" id="categoryTabs"></div>
+        <div class="toolbar-right"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="搜索课程、讲师..." /></label><select id="sortSelect" aria-label="课程排序"><option value="popular">综合推荐</option><option value="rating">评分最高</option><option value="priceAsc">价格从低到高</option><option value="priceDesc">价格从高到低</option></select></div>
+      </div>
+      <div class="course-grid" id="courseGrid"></div>
+      <div class="empty-state hidden" id="emptyState"><strong>没有找到相关课程</strong><span>换个关键词或分类试试吧</span><button class="secondary-button" id="resetFilters">清除筛选</button></div>
+    </section>
+
+    <section class="learning-paths" id="paths">
+      <div class="paths-intro"><span class="section-kicker light">LEARNING PATHS</span><h2>不止一门课，<br>而是一条成长路径</h2><p>围绕真实职业能力设计，让零散知识形成体系。每条路径均含阶段任务、项目实战与导师点评。</p><button class="outline-light-button" data-scroll="#courses">查看所有路径 →</button></div>
+      <div class="path-list">
+        <article><span>01</span><div><small>PRODUCT DESIGN</small><h3>产品设计师成长路径</h3><p>6 门课程 · 42 个项目练习</p></div><button data-category="设计创意">↗</button></article>
+        <article><span>02</span><div><small>CONTENT CREATOR</small><h3>内容创作者进阶路径</h3><p>5 门课程 · 36 个创作任务</p></div><button data-category="内容表达">↗</button></article>
+        <article><span>03</span><div><small>BUSINESS GROWTH</small><h3>商业增长实战路径</h3><p>7 门课程 · 28 个实战案例</p></div><button data-category="商业增长">↗</button></article>
+      </div>
+    </section>
+
+    <section class="benefits" id="benefits">
+      <div class="section-heading"><div><span class="section-kicker">WHY ZHIYU</span><h2>认真学习，也值得被认真对待</h2></div></div>
+      <div class="benefit-grid">
+        <article><span>01</span><div class="benefit-icon">◫</div><h3>结构化课程体系</h3><p>从知识地图到实战任务，循序渐进构建完整能力。</p></article>
+        <article><span>02</span><div class="benefit-icon">◎</div><h3>真实项目驱动</h3><p>边学边做，用可展示的作品检验你的每一步成长。</p></article>
+        <article><span>03</span><div class="benefit-icon">↯</div><h3>高效学习支持</h3><p>课程笔记、进度管理与社群答疑，让坚持更容易。</p></article>
+        <article><span>04</span><div class="benefit-icon">♢</div><h3>长期内容更新</h3><p>一次购买长期学习，持续获得行业新知与案例。</p></article>
+      </div>
+    </section>
+
+    <section class="newsletter"><div><span>每周成长来信</span><h2>好内容，不应该错过</h2><p>订阅知屿周刊，获得课程上新、行业洞察与限时福利。</p></div><form id="subscribeForm"><input type="email" required placeholder="输入你的邮箱" aria-label="邮箱地址" /><button type="submit">订阅 →</button></form></section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><a class="brand" href="#"><span class="brand-mark">知</span><span>知屿课堂</span></a><p>持续学习，持续创造。<br>让知识成为改变生活的力量。</p></div>
+    <div><strong>发现课程</strong><a href="#courses">全部课程</a><a href="#paths">学习路径</a><a href="#courses">近期上新</a></div>
+    <div><strong>帮助支持</strong><a href="#">购买须知</a><a href="#">常见问题</a><a href="#">联系我们</a></div>
+    <div><strong>关注我们</strong><a href="#">微信公众号</a><a href="#">小红书</a><a href="#">视频号</a></div>
+    <div class="footer-bottom"><span>© 2026 知屿课堂</span><span>隐私政策 · 用户协议</span></div>
+  </footer>
+
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="购物袋">
+    <div class="drawer-header"><div><span>SHOPPING BAG</span><h2>我的购物袋</h2></div><button id="closeCart">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer" id="cartFooter"><div class="coupon-row"><input id="couponInput" placeholder="输入优惠码" /><button id="applyCoupon">使用</button></div><div class="price-line"><span>商品金额</span><strong id="subtotal">¥0</strong></div><div class="price-line discount-line hidden" id="discountLine"><span>优惠</span><strong id="discount">-¥0</strong></div><div class="price-line total-line"><span>合计</span><strong id="totalPrice">¥0</strong></div><button class="checkout-button" id="checkoutButton">去结算 <span>→</span></button><p>课程为数字内容，支付后即可开始学习</p></div>
+  </aside>
+
+  <div class="modal-overlay" id="modalOverlay"><div class="modal" id="courseModal" role="dialog" aria-modal="true"></div></div>
+  <div class="modal-overlay" id="checkoutOverlay"><div class="checkout-modal" role="dialog" aria-modal="true"><button class="modal-close" id="closeCheckout">×</button><span class="section-kicker">SECURE CHECKOUT</span><h2>确认订单</h2><div class="checkout-summary" id="checkoutSummary"></div><div class="payment-methods"><label class="selected"><input type="radio" name="payment" checked /><span class="pay-icon wechat">微</span><span><strong>微信支付</strong><small>亿万用户的选择</small></span><i>✓</i></label><label><input type="radio" name="payment" /><span class="pay-icon alipay">支</span><span><strong>支付宝</strong><small>安全快捷支付</small></span><i>✓</i></label></div><label class="agreement"><input type="checkbox" id="agreement" checked /> 我已阅读并同意《课程购买协议》</label><button class="checkout-button" id="payButton">确认支付 <span id="payAmount">¥0</span></button></div></div>
+  <div class="profile-popover hidden" id="profilePopover"><strong>你好，学习者</strong><span>今天也要保持好奇心</span><button id="ordersButton">我的订单 <i>→</i></button><button>学习中心 <i>→</i></button></div>
+  <div class="toast" id="toast"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
